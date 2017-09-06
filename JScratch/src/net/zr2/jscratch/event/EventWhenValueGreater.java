@@ -23,6 +23,11 @@ public class EventWhenValueGreater extends Event {
 		return false;
 	}
 
+	@Override
+	public int hashCode() {
+		return (super.hashCode() ^ (this.numericValue << 24)) * this.value.hashCode();
+	}
+
 	public static enum Value {
 		LOUDNESS, TIMER, VIDEO_MOTION;
 	}

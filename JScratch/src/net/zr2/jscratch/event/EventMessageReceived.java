@@ -12,5 +12,10 @@ public class EventMessageReceived extends Event {
 	public boolean equals(Object paramObject) {
 		return super.equals(paramObject) && ((EventMessageReceived) paramObject).message.equals(this.message);
 	}
+	
+	@Override
+	public int hashCode() {
+		return super.hashCode() ^ (this.message.hashCode() << 8);
+	}
 
 }

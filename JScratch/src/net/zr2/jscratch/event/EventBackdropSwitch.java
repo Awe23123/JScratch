@@ -14,5 +14,10 @@ public class EventBackdropSwitch extends Event {
 	public boolean equals(Object paramObject) {
 		return super.equals(paramObject) && ((EventBackdropSwitch) paramObject).backdrop == this.backdrop;
 	}
+	
+	@Override
+	public int hashCode() {
+		return super.hashCode() ^ backdrop.hashCode();
+	}
 
 }

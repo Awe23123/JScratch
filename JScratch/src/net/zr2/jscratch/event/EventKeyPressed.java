@@ -12,5 +12,10 @@ public class EventKeyPressed extends Event {
 	public boolean equals(Object paramObject) {
 		return super.equals(paramObject) && ((EventKeyPressed) paramObject).keyCode == this.keyCode;
 	}
+	
+	@Override
+	public int hashCode() {
+		return super.hashCode() ^ (keyCode << 4);
+	}
 
 }
