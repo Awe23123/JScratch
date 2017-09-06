@@ -14,6 +14,15 @@ public class EventWhenValueGreater extends Event {
 		this(value, 10);
 	}
 
+	@Override
+	public boolean equals(Object paramObject) {
+		if (super.equals(paramObject)) {
+			EventWhenValueGreater event = (EventWhenValueGreater) paramObject;
+			return event.numericValue == this.numericValue && event.value == this.value;
+		}
+		return false;
+	}
+
 	public static enum Value {
 		LOUDNESS, TIMER, VIDEO_MOTION;
 	}

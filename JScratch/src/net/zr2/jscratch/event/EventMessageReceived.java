@@ -7,5 +7,10 @@ public class EventMessageReceived extends Event {
 	public EventMessageReceived(String message) {
 		this.message = message;
 	}
-	
+
+	@Override
+	public boolean equals(Object paramObject) {
+		return super.equals(paramObject) && ((EventMessageReceived) paramObject).message.equals(this.message);
+	}
+
 }
