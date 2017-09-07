@@ -21,6 +21,7 @@ public class Sprite {
 	
 	public double volume = 100;
 	public double videoMotion = -1;
+	public double videoDirection = -1;
 	
 	public Sprite(String name) {
 		this.name = name;
